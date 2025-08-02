@@ -1,10 +1,17 @@
 import { useState } from "react";
-import "./App.css";
-import ad_hero from './assets/admissionsbooxhero.jpeg';
+import "../App.css";
+import ad_hero from '.././assets/admissionsbooxhero.jpeg';
+import { useNavigate } from "react-router-dom";
 
 function App() {
   const [email_addr, setEmail_addr] = useState("");
   const [message, setMessage] = useState(null);
+
+  const navigate = useNavigate()
+
+  const goToForm = () => {
+    navigate('/onboard');
+  };
 
   const handleChange = (e) => {
     setEmail_addr(e.target.value);
@@ -63,7 +70,7 @@ function App() {
               <br />
               <div class="button_contain">
                 <button type="submit" class="btn mail">Join mailing list</button>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4fxHx4SpZXRK2mT2Ucwtax83QPATf-tZIKRYY0niMdFpD4g/viewform" class="btn vendor">Sign-up your school!</a>
+                <a href="#" onClick={goToForm} class="btn vendor">Sign-up your school!</a>
               </div>
               <br />
               {/* <p class="error"> */}
