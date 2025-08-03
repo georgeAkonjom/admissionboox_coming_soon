@@ -33,7 +33,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "www.admissionboox.com",
     "https://admissionboox-coming-soon.onrender.com/",
     "https://localhost:5173",
 ]
