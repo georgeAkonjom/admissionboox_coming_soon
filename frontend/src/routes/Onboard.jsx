@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import "../form.css"
+
 
 const SchoolInfoForm = () => {
   const [formData, setFormData] = useState({
@@ -46,122 +48,135 @@ const SchoolInfoForm = () => {
 
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>School Information Form</h2>
+    <section className="form-container">
 
-      <label>
-        School Email:
-        <input
-          type="email"
-          name="school_email"
-          value={formData.school_email}
-          onChange={handleChange}
-          required
-        />
-      </label>
+      <h2 className='header'>School Information Form</h2>
+      <form className='onboard' onSubmit={handleSubmit}>
+        <div className="form">
 
-      <label>
-        School Name:
-        <input
-          type="text"
-          name="school_name"
-          maxLength="200"
-          value={formData.school_name}
-          onChange={handleChange}
-          required
-        />
-      </label>
+          <label>
+            School Email:
 
-      <label>
-        School Description:
-        <textarea
-          name="school_description"
-          maxLength="6000"
-          value={formData.school_description}
-          onChange={handleChange}
-          required
-        />
-      </label>
+          </label>
+          <input
+            type="email"
+            name="school_email"
+            value={formData.school_email}
+            onChange={handleChange}
+            required
+          />
 
-      <label>
-        Facilities and Clubs:
-        <textarea
-          name="facilities_and_clubs"
-          maxLength="4000"
-          value={formData.facilities_and_clubs}
-          onChange={handleChange}
-        />
-      </label>
+          <label>
+            School Name:
 
-      <label>
-        School Admin Name:
-        <input
-          type="text"
-          name="school_admin_name"
-          maxLength="200"
-          value={formData.school_admin_name}
-          onChange={handleChange}
-          required
-        />
-      </label>
+          </label>
+          <input
+            type="text"
+            name="school_name"
+            maxLength="200"
+            value={formData.school_name}
+            onChange={handleChange}
+            required
+          />
 
-      <label>
-        School Admin Email:
-        <input
-          type="email"
-          name="school_admin_email"
-          value={formData.school_admin_email}
-          onChange={handleChange}
-          required
-        />
-      </label>
+          <label>
+            School Description:
 
-      <label>
-        School Address:
-        <textarea
-          name="school_address"
-          maxLength="600"
-          value={formData.school_address}
-          onChange={handleChange}
-          required
-        />
-      </label>
+          </label>
+          <textarea
+            name="school_description"
+            maxLength="6000"
+            value={formData.school_description}
+            onChange={handleChange}
+            required
+          />
 
-      <label>
-        Curriculum Type:
-        <input
-          type="text"
-          name="curriculum_type"
-          maxLength="60"
-          value={formData.curriculum_type}
-          onChange={handleChange}
-          required
-        />
-      </label>
+          <label>
+            Facilities and Clubs:
 
-      <label>
-        Website Link:
-        <input
-          type="url"
-          name="website_link"
-          maxLength="100"
-          value={formData.website_link}
-          onChange={handleChange}
-        />
-      </label>
+          </label>
+          <textarea
+            name="facilities_and_clubs"
+            maxLength="4000"
+            value={formData.facilities_and_clubs}
+            onChange={handleChange}
+          />
 
-      <label>
-        Date Established:
-        <input
-          type="date"
-          name="date_est"
-          value={formData.date_est}
-          onChange={handleChange}
-        />
-      </label>
+          <label>
+            School Admin Name:
 
-      <button type="submit">Submit</button>
-    </form>
+          </label>
+          <input
+            type="text"
+            name="school_admin_name"
+            maxLength="200"
+            value={formData.school_admin_name}
+            onChange={handleChange}
+            required
+          />
+
+          <label>
+            School Admin Email:
+          </label>
+          <input
+            type="email"
+            name="school_admin_email"
+            value={formData.school_admin_email}
+            onChange={handleChange}
+            required
+          />
+
+          <label>
+            School Address:
+          </label>
+          <textarea
+            name="school_address"
+            maxLength="600"
+            value={formData.school_address}
+            onChange={handleChange}
+            required
+          />
+
+          <label>
+            Curriculum Type:
+
+          </label>
+          <input
+            type="text"
+            name="curriculum_type"
+            maxLength="60"
+            value={formData.curriculum_type}
+            onChange={handleChange}
+            required
+          />
+
+          <label>
+            Website Link:
+
+          </label>
+          <input
+            type="url"
+            name="website_link"
+            maxLength="100"
+            value={formData.website_link}
+            onChange={handleChange}
+          />
+
+          <label>
+            Date Established:
+
+          </label>
+          <input
+            type="date"
+            name="date_est"
+            value={formData.date_est}
+            onChange={handleChange}
+          />
+
+        </div>
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </section>
   );
 };
 
