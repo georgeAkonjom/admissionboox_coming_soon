@@ -32,7 +32,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["www.admissionboox.com", "https://localhost:5173"]
+ALLOWED_HOSTS = [
+    "www.admissionboox.com",
+    "https://admissionboox-coming-soon.onrender.com/",
+    "https://localhost:5173",
+]
 
 
 # Application definition
@@ -90,7 +94,7 @@ DATABASES = {
 }
 
 CORS_ALLOWED_ORIGINS = ["https://admissionboox.vercel.app", "https://admissionboox.com"]
-
+CSRF_TRUSTED_ORIGINS = ["https://admissionboox-coming-soon.onrender.com"]
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
