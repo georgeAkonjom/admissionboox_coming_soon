@@ -72,8 +72,8 @@ function App() {
                 />
               </div>
               <div className="flex flex-col sm:flex-row gap-[1rem]">
-                <button type="submit" className="bg-booxorange p-[1rem] rounded">Join mailing list</button>
-                <button onClick={goToForm} className="block bg-btncol p-[1rem] rounded">Sign-up your school!</button>
+                <button type="submit" className="font-bold cursor-pointer bg-booxorange p-[1rem] rounded">Join our mailing list</button>
+                <button onClick={goToForm} className="font-bold cursor-pointer block bg-btncol p-[1rem] rounded">Sign-up your school!</button>
               </div>
               <br />
 
@@ -82,7 +82,7 @@ function App() {
             {message && <p class="text-red-600"> {message} </p>}
             {/* </p> */}
           </div>
-          <div className=""><p>AdmissionBOOX is proprietary software from <a href="https://www.booxcommunity.com" target="_blank" rel="noopener">BOOX Community</a> that aims to connect schools to applicants and prospective students. Sign up as a school today!</p></div>
+          <div className=""><p>AdmissionBOOX is proprietary software from <a className="font-bold text-booxorange" href="https://www.booxcommunity.com" target="_blank" rel="noopener">BOOX Community</a> that aims to connect schools to applicants and prospective students. Sign up as a school today!</p></div>
         </div>
       </section >
       <section>

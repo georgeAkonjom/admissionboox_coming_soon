@@ -52,7 +52,7 @@ const SchoolInfoForm = () => {
 
         <span className='p-[4rem] text-[3rem] sm:text-[4rem] font-bold'>School Information Form</span>
         <form className='flex flex-col items-center pb-[6rem] gap-[4rem]' onSubmit={handleSubmit}>
-          <div className="flex flex-col pb-[4rem] max-w-[80vw] sm:max-w-[60vw] gap-[2rem] items-start bg-white p-[4rem]">
+          <div className="flex flex-col shadow-md pb-[4rem] max-w-[80vw] sm:max-w-[60vw] gap-[2rem] items-start bg-white p-[4rem]">
 
             <label >
               School Email:
