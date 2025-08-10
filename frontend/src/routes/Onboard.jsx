@@ -47,135 +47,154 @@ const SchoolInfoForm = () => {
 
 
   return (
-    <section className="form-container">
+    <>
+      <section className='flex flex-col items-center gap-[4rem] text-[1.5rem] bg-gray-100'>
 
-      <h2 className='header'>School Information Form</h2>
-      <form className='onboard' onSubmit={handleSubmit}>
-        <div className="form">
+        <span className='p-[4rem] text-[3rem] sm:text-[4rem] font-bold'>School Information Form</span>
+        <form className='flex flex-col items-center pb-[6rem] gap-[4rem]' onSubmit={handleSubmit}>
+          <div className="flex flex-col pb-[4rem] max-w-[80vw] sm:max-w-[60vw] gap-[2rem] items-start bg-white p-[4rem]">
 
-          <label>
-            School Email:
+            <label >
+              School Email:
+            </label>
+            <input
+              className='border-2 rounded border-gray-500 p-[1rem] focus:outline-none focus:border-booxorange'
+              type="email"
+              name="school_email"
+              value={formData.school_email}
+              onChange={handleChange}
+              required
+            />
 
-          </label>
-          <input
-            type="email"
-            name="school_email"
-            value={formData.school_email}
-            onChange={handleChange}
-            required
-          />
+            <label>
+              School Name:
 
-          <label>
-            School Name:
+            </label>
+            <input
+              className='border-2 rounded border-gray-500 p-[1rem] focus:outline-none focus:border-booxorange'
+              type="text"
+              name="school_name"
+              maxLength="200"
+              value={formData.school_name}
+              onChange={handleChange}
+              required
+            />
 
-          </label>
-          <input
-            type="text"
-            name="school_name"
-            maxLength="200"
-            value={formData.school_name}
-            onChange={handleChange}
-            required
-          />
+            <label>
+              School Description:
 
-          <label>
-            School Description:
+            </label>
+            <textarea
+              className='border-2 rounded border-gray-500 p-[1rem] focus:outline-none focus:border-booxorange'
+              name="school_description"
+              maxLength="6000"
+              value={formData.school_description}
+              onChange={handleChange}
+              required
+            />
 
-          </label>
-          <textarea
-            name="school_description"
-            maxLength="6000"
-            value={formData.school_description}
-            onChange={handleChange}
-            required
-          />
+            <label>
+              Facilities and Clubs:
 
-          <label>
-            Facilities and Clubs:
+            </label>
+            <textarea
+              className='border-2 rounded border-gray-500 p-[1rem] focus:outline-none focus:border-booxorange'
+              name="facilities_and_clubs"
+              maxLength="4000"
+              value={formData.facilities_and_clubs}
+              onChange={handleChange}
+            />
 
-          </label>
-          <textarea
-            name="facilities_and_clubs"
-            maxLength="4000"
-            value={formData.facilities_and_clubs}
-            onChange={handleChange}
-          />
+            <label>
+              School Admin Name:
 
-          <label>
-            School Admin Name:
+            </label>
+            <input
+              className='border-2 rounded border-gray-500 p-[1rem] focus:outline-none focus:border-booxorange'
+              type="text"
+              name="school_admin_name"
+              maxLength="200"
+              value={formData.school_admin_name}
+              onChange={handleChange}
+              required
+            />
 
-          </label>
-          <input
-            type="text"
-            name="school_admin_name"
-            maxLength="200"
-            value={formData.school_admin_name}
-            onChange={handleChange}
-            required
-          />
+            <label>
+              School Admin Email:
+            </label>
+            <input
+              className='border-2 rounded border-gray-500 p-[1rem] focus:outline-none focus:border-booxorange'
+              type="email"
+              name="school_admin_email"
+              value={formData.school_admin_email}
+              onChange={handleChange}
+              required
+            />
 
-          <label>
-            School Admin Email:
-          </label>
-          <input
-            type="email"
-            name="school_admin_email"
-            value={formData.school_admin_email}
-            onChange={handleChange}
-            required
-          />
+            <label>
+              School Address:
+            </label>
+            <textarea
 
-          <label>
-            School Address:
-          </label>
-          <textarea
-            name="school_address"
-            maxLength="600"
-            value={formData.school_address}
-            onChange={handleChange}
-            required
-          />
+              className='border-2 rounded border-gray-500 p-[1rem] focus:outline-none focus:border-booxorange'
+              name="school_address"
+              maxLength="600"
+              value={formData.school_address}
+              onChange={handleChange}
+              required
+            />
 
-          <label>
-            Curriculum Type:
+            <label>
+              Curriculum Type:
 
-          </label>
-          <input
-            type="text"
-            name="curriculum_type"
-            maxLength="60"
-            value={formData.curriculum_type}
-            onChange={handleChange}
-            required
-          />
+            </label>
+            <input
+              className='border-2 rounded border-gray-500 p-[1rem] focus:outline-none focus:border-booxorange'
+              type="text"
+              name="curriculum_type"
+              placeholder='Nigerian, British, etc'
+              maxLength="60"
+              value={formData.curriculum_type}
+              onChange={handleChange}
+              required
+            />
 
-          <label>
-            Website Link:
+            <label>
+              Website Link:
 
-          </label>
-          <input
-            type="url"
-            name="website_link"
-            maxLength="100"
-            value={formData.website_link}
-            onChange={handleChange}
-          />
+            </label>
+            <input
+              className='border-2 rounded border-gray-500 p-[1rem] focus:outline-none focus:border-booxorange'
+              type="url"
+              name="website_link"
+              placeholder='Paste in your schools website link'
+              maxLength="100"
+              value={formData.website_link}
+              onChange={handleChange}
+            />
 
-          <label>
-            Date Established:
+            <label>
+              Date Established:
 
-          </label>
-          <input
-            type="date"
-            name="date_est"
-            value={formData.date_est}
-            onChange={handleChange}
-          />
+            </label>
+            <input
+              className='border-2 rounded border-gray-500 p-[1rem] focus:outline-none focus:border-booxorange'
+              type="date"
+              name="date_est"
+              value={formData.date_est}
+              onChange={handleChange}
+            />
 
+          </div>
+          <button class="bg-btncol p-[2rem] w-full rounded text-gray-50 font-bold hover:cursor-pointer active:bg-gray-800" type="submit">Submit</button>
+        </form>
+      </section >
+      <section>
+        <div className="fixed flex justify-center bottom-0 w-[100vw] bg-booxorange" id="copy_contain">
+          <p>&copy; BOOX Community Limited. <span className="font-bold">2025</span></p>
         </div>
-        <button class="btn" type="submit">Submit</button>
-      </form>
-    </section>
+      </section>
+    </>
   );
 };
 

@@ -2,6 +2,7 @@ import { useState } from "react";
 import ad_hero from '.././assets/admissionsbooxhero.jpeg';
 import { useNavigate } from "react-router-dom";
 
+
 function App() {
   const [email_addr, setEmail_addr] = useState("");
   const [message, setMessage] = useState(null);
