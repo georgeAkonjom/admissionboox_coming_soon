@@ -63,7 +63,7 @@ function App() {
                 </label>
                 <br />
                 <input
-                  className="focus:outline-none border-2 border-booxorange p-[1rem] rounded-[1rem]"
+                  className="focus:outline-none border-2 border-booxorange p-[1rem] rounded-[1rem] lg:max-w-[25vw]"
                   type="email"
                   id="email"
                   placeholder="Email Address"
@@ -84,7 +84,7 @@ function App() {
           </div>
           <div className=""><p>AdmissionBOOX is proprietary software from <a className="font-bold text-booxorange" href="https://www.booxcommunity.com" target="_blank" rel="noopener">BOOX Community</a> that aims to connect schools to applicants and prospective students. Sign up as a school today!</p></div>
         </div>
-      </section >
+      </section>
       <section>
         <div className="fixed flex justify-center bottom-0 w-[100vw] bg-booxorange" id="copy_contain">
           <p>&copy; BOOX Community Limited. <span className="font-bold">2025</span></p>
