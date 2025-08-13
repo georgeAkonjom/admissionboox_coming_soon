@@ -35,12 +35,13 @@ function App() {
         setMessage("Thanks! You're on the list.");
         setEmail_addr("");
       } else {
-        setMessage(data.detail || "Something went wrong.");
+        setMessage(data.detail || data.error || "Something went wrong.");
       }
     } catch (error) {
       setMessage("Network error. Please try again.");
     }
   };
+
 
   return (
     <>
